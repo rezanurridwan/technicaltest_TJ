@@ -1,6 +1,6 @@
 This below description playwright (Javascript) automation test!
 
-This project using POM (Page Object Methode) with this site https://demoqa.com/ and only just for two module that is Web Table and Droppable.
+This project using POM (Page Object Model) with this site https://demoqa.com/ and only just for four module below.
 
 This the flow that project should be run 
 1. Bulk Insert User di Web Tables
@@ -23,7 +23,22 @@ Tools :
 3. Playwright (framework)
 4. Javascript (language)
 
-You can use these syntax for more detail!
+Step by steps:
+1. Install node.js
+2. Install vscode
+3. Clone repository
+4. Install playwright -> npx playwright install
+5. npm install csv-parse (for DDT using csv)
+
+You can use these syntax!
 - How configure web browser you can change setting on playwright.config.js line 37
 - How declare priority test file/folder you can setting on playwright.config.js line 15
-- How to run/execute -> npx playwright test tests/webtables.spec.js
+- How to run/execute:
+    1. webtables -> npx playwright test tests/webtables.spec.js
+    2. droppable -> npx playwright test tests/droppable.spec.js
+    3. registrationform -> npx playwright test tests/registrationform.spec.js
+    4. resizable -> npx playwright test tests/resizable.spec.js
+- How to generate reports -> npx playwright show-report
+- How to run/execute with browser npx playwright test tests/webtables.spec.js --headed
+
+
