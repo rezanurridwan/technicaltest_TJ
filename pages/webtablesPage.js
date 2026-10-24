@@ -42,8 +42,11 @@ class WebTablesPage {
   await this.page.screenshot({
     path: path.join(screenshotDir, `${fileName}.png`),
     fullPage: true,
-  });
-}
-
+    });
+  }
+  async verifyUserAdded(firstName, lastName) {
+    const userRow = await this.page.locator(`//div[@class='rt-tr-group']//div[contains(text(),'${firstName}')]//following-sibling::div[contains(text(),'${lastName}')]`);
+    return await userRow.isVisible();
+  }
 }
 module.exports = WebTablesPage;

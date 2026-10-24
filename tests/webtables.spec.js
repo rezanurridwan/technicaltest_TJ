@@ -13,7 +13,7 @@ const users = parse(fs.readFileSync(csvPath, 'utf8'), {
   trim: true,
 });
 
-test('Input multiple users from CSV', async ({ page }) => {
+test('Bulk Insert User di Web Tables', async ({ page }) => {
   const webTables = new WebTablesPage(page);
 
   await webTables.open();
@@ -38,4 +38,5 @@ test('Input multiple users from CSV', async ({ page }) => {
     await page.waitForTimeout(2000); t
     await webTables.takeScreenshot(`user-${i + 1}-submitted`);
   }
+
 });
