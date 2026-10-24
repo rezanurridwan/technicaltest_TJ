@@ -1,0 +1,18 @@
+
+{
+  "firstName": "Budi",
+  "lastName": "Santoso",
+  "email": "budi.santoso@example.com",
+  "gender": "Male",
+  "mobile": "0812345678",
+  "address": "Bandung, Indonesia",
+  "dateOfBirth": {
+    "day": "15",
+    "month": "January",
+    "year": "2000"
+  },
+  "subject": "Maths",
+  "hobby": "Sports",
+  "state": "NCR",
+  "city": "Delhi"
+}
