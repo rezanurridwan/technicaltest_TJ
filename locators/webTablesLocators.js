@@ -1,4 +1,3 @@
-
 const locators = {
   addButton: '#addNewRecordButton',
   firstNameInput: '#firstName',

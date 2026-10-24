@@ -1,4 +1,6 @@
 const locators = require("../locators/webTablesLocators");
+const fs = require('node:fs');
+const path = require('node:path');
 
 class WebTablesPage {
   constructor(page) {
@@ -31,5 +33,17 @@ class WebTablesPage {
   async submitButton() {
     await this.page.locator(locators.submitButton).click();
   }
+
+  async takeScreenshot(fileName) {
+  const screenshotDir = path.join(__dirname, '../screenshots');
+
+  fs.mkdirSync(screenshotDir, { recursive: true });
+
+  await this.page.screenshot({
+    path: path.join(screenshotDir, `${fileName}.png`),
+    fullPage: true,
+  });
+}
+
 }
 module.exports = WebTablesPage;
