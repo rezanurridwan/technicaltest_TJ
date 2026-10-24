@@ -35,7 +35,7 @@ class WebTablesPage {
   }
 
   async takeScreenshot(fileName) {
-  const screenshotDir = path.join(__dirname, '../screenshots');
+  const screenshotDir = path.join(__dirname, '../screenshots/webtables');
 
   fs.mkdirSync(screenshotDir, { recursive: true });
 
