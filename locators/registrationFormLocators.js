@@ -12,7 +12,7 @@ const locators = {
   cityDropdown: '#city',
   hobbySports: 'label[for="hobbies-checkbox-1"]',
   pictureInput: '#uploadPicture',
-
+  verifyModal: '#example-modal-sizes-title-lg',
   submitButton: '#submit',
 };
 

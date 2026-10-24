@@ -1,4 +1,4 @@
-const { test } = require("@playwright/test");
+const { test, expect } = require("@playwright/test");
 const path = require("node:path");
 
 const RegistrationFormPage = require("../pages/registrationFormPage");
@@ -16,12 +16,22 @@ test("Complete registration form", async ({ page }) => {
   await registrationForm.fillAddress(user.address);
   await registrationForm.selectDateOfBirth(user.dateOfBirth);
   await registrationForm.selectHobbySports();
+  const picturePath = path.join(__dirname, "../data/uploads/koci.jpeg");
+
+  await registrationForm.uploadPicture(picturePath);
   await registrationForm.selectSubject(user.subject);
   await registrationForm.selectState(user.state);
   await registrationForm.selectCity(user.city);
+  await page.waitForTimeout(3000);
+  await registrationForm.takeScreenshot("registration-before-submit");
   await registrationForm.submitForm();
 
-  await page.waitForTimeout(1000);
+  const modal = page.locator(".modal-content");
 
-  await registrationForm.takeScreenshot("registration-after-submit");
+  await expect(modal).toBeVisible();
+  await expect(modal).toContainText("Thanks for submitting the form");
+  await expect(modal).toContainText(user.firstName);
+  await expect(modal).toContainText(user.email);
+  await page.waitForTimeout(3000);
+  await registrationForm.takeScreenshot("registration-verified");
 });

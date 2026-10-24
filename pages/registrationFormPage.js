@@ -31,14 +31,6 @@ class RegistrationFormPage {
     await this.page.locator(locators.genderMale).click();
   }
 
-  async fillSubjects(subjects) {
-    await this.page.locator(locators.subjectsInput).fill(subjects);
-  }
-
-  async selectHobbies() {
-    await this.page.locator(`input[id="${locators.hobies}"]`).check();
-  }
-
   async fillAddress(address) {
     await this.page.locator(locators.currentAddressInput).fill(address);
   }
