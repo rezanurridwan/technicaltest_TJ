@@ -1,1 +1,29 @@
-This below description automation test!
+This below description playwright (Javascript) automation test!
+
+This project using POM (Page Object Methode) with this site https://demoqa.com/ and only just for two module that is Web Table and Droppable.
+
+This the flow that project should be run 
+1. Bulk Insert User di Web Tables
+    URL: https://demoqa.com/webtables 
+    Data: File CSV
+    Goals : Create user on table using data csv and validate that data should be shown or record on table screen.
+2. Drag and Drop (Droppable)
+    URL: https://demoqa.com/droppable
+    Goals : User can drag and drop object to target area.
+3. Resize Element (Resizable)
+    URL: https://demoqa.com/resizable
+    Goals : Resize element to 400 × 200 pixel.
+4. Student Registration Form
+    URL: https://demoqa.com/automation-practice-form
+    Goals : Create data form Student Registration and then verify on popup confirmation.
+
+Tools :
+1. Node.js
+2. Vscode (Text Editor)
+3. Playwright (framework)
+4. Javascript (language)
+
+You can use these syntax for more detail!
+- How configure web browser you can change setting on playwright.config.js line 37
+- How declare priority test file/folder you can setting on playwright.config.js line 15
+- How to run/execute -> npx playwright test tests/webtables.spec.js
