@@ -27,7 +27,7 @@ Step by steps:
 1. Install node.js
 2. Install vscode
 3. Clone repository
-4. Install playwright -> npx playwright install
+4. Install playwright -> npm init playwright@latest
 5. npm install csv-parse (for DDT using csv)
 
 You can use these syntax!
